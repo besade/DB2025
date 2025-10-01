@@ -62,3 +62,101 @@
 - Reviews can only be created by customers who have purchased the product.
 
 ## Entities, Atributes and Relationships
+
+# **Entities and Attributes**
+
+**Customer**
+**PK**: customer_id
+first_name
+last_name
+phone_number
+email
+date_of_birth
+
+**Address**
+**PK**: address_id
+**FK**: customer_id
+country
+city
+address_line
+
+**Cart**
+**PK**: cart_id
+**FK**: customer_id
+total_price
+
+**Cart Item**
+**PK**: cart_id
+**PK**: product_id
+unit_price
+quantity
+total_item_price
+
+**Order**
+**PK**: order_id
+**FK**: customer_id
+**FK**: address_id
+recipient_first_name
+recipient_last_name
+customer_is_recipient
+delivery_type
+order_date
+status
+total_price
+
+**Order Item**
+**PK**: order_id
+**PK**: product_id
+unit_price
+quantity
+total_item_price
+
+**Payment**
+**PK**: payment_id
+**FK**: order_id
+payment_method
+payment_date
+status
+amount
+transaction_id
+
+**Product**
+**PK**: product_id
+**FK**: category_id
+name
+country
+weight
+stock_quantity
+price
+
+**Category**
+**PK**: category_id
+name
+
+**Review**
+**PK**: review_id
+**FK**: customer_id
+**FK**: product_id
+comment
+rating
+review_date
+
+# **Relationships and Limitations**
+
+- A Customer can have multiple Addresses.
+
+- A Customer can create multiple Orders.
+
+- Each Order is linked to one Customer and one Address.
+
+- An Order can contain multiple Order Items (many-to-many between Orders and Products).
+
+- Each Payment is linked to exactly one Order.
+
+- A Customer has one Cart, which can contain multiple Cart Items (many-to-many between Cart and Products).
+
+- Each Product belongs to one Category.
+
+- A Customer can leave multiple Reviews, but only one per Product.
+
+- Each Review references a Customer and a Product.
