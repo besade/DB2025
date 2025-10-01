@@ -63,7 +63,7 @@
 
 ## Entities, Atributes and Relationships
 
-# **Entities and Attributes**
+### **Entities and Attributes**
 
 **Customer**
 **PK**: customer_id
@@ -141,7 +141,7 @@ comment
 rating
 review_date
 
-# **Relationships and Limitations**
+### **Relationships and Limitations**
 
 - A Customer can have multiple Addresses.
 
