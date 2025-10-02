@@ -1,5 +1,5 @@
 ﻿# Transforming ER Diagram into PostgreSQL Schema
-![ERD](/BD_ER_Diagram2.jpg)
+![ERD](DB_ER_Diagram2.jpg)
 
 ## **SQL Script**
 
@@ -359,13 +359,13 @@ review_date – defaults to current date
 ### **Each table has been populated with at least 3–5 records using INSERT statements.**
 
 **Customer Table**
-![Customer Table Screenshot](/customer_table.png)
+![Customer Table Screenshot](customer_table.png)
 
 **Product Table**
-![Product Table Screenshot](/product_table.png)
+![Product Table Screenshot](product_table.png)
 
 **Order Table**
-![Order Table Screenshot](/order_table.png)
+![Order Table Screenshot](order_table.png)
 
 **Review Table**
-![Review Table Screenshot](/review_table.png)
+![Review Table Screenshot](review_table.png)
