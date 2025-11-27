@@ -1,6 +1,7 @@
-#SELECT, INSERT, UPDATE, DELETE Operations
+# SELECT, INSERT, UPDATE, DELETE Operations
 
 ## **Previous requests:**
+```sql
 /* 
 CREATE TYPE payment_type AS ENUM ('card', 'paypal', 'apple_pay', 'google_pay');
 CREATE TYPE status AS ENUM ('pending', 'success', 'failed', 'refunded');
@@ -206,9 +207,10 @@ VALUES
 (3, 10, 'Кислі черв’ячки сподобались, діти задоволені!', 9, '2025-10-02');
 
 */
-
+```
 
 ## **New Requests**
+```sql
 -- Показати всіх користувачів
 -- SELECT * FROM customer;
 
@@ -233,6 +235,7 @@ VALUES
 
 -- Видалення користувача
 -- DELETE FROM customer WHERE first_name = 'Vitya';
+```
 
 ### 1. New Test Customer "Vitya Knyazev"
 Phone: +380673298521
