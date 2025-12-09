@@ -79,6 +79,7 @@ model order_table {
   delivery_type         delivery     @default(nova_poshta)
   order_date            DateTime     @default(dbgenerated("CURRENT_DATE")) @db.Date
   order_status          status       @default(pending)
+  shipping              Shipping?
   order_item            order_item[]
   address               address      @relation(fields: [address_id], references: [address_id], onDelete: NoAction, onUpdate: NoAction)
   customer              customer     @relation(fields: [customer_id], references: [customer_id], onDelete: NoAction, onUpdate: NoAction)
@@ -122,6 +123,13 @@ model review {
   review_date    DateTime @default(dbgenerated("CURRENT_DATE")) @db.Date
   customer       customer @relation(fields: [customer_id], references: [customer_id], onDelete: NoAction, onUpdate: NoAction)
   product        product  @relation(fields: [product_id], references: [product_id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model Shipping {
+  shipping_id   Int         @id @default(autoincrement())
+  tracking_code String?     @db.VarChar(200)
+  order_id      Int         @unique
+  order_table   order_table @relation(fields: [order_id], references: [order_id], onDelete: NoAction, onUpdate: NoAction)
 }
 
 enum delivery {
